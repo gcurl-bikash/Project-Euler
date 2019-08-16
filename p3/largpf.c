@@ -7,7 +7,7 @@ int	main(void)
 	long int subs;
 	int largestprime;
 
-	i = 1;
+	i = 2;
 	printf("Type the number to find its largest prime factor:\n");
 	scanf("%ld", &nb);
 
@@ -21,7 +21,7 @@ int	main(void)
 			{
 				nb = nb / i;
 				printf("%d, %ld\n", i, nb);
-				largestprime = i++;
+				largestprime = i;
 			}
 		}
 		i++;
