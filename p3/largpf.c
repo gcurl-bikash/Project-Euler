@@ -13,19 +13,24 @@ int	main(void)
 
 	subs = nb;
 	printf("The number you have entered is %ld\n", nb);
-	while (i <= nb)
+	if (nb > 1)
 	{
-		if (nb % i == 0)
+		while (i <= nb)
 		{
-			while (nb % i == 0)
-			{
-				nb = nb / i;
-				printf("%d, %ld\n", i, nb);
-				largestprime = i;
-			}
+			if (nb % i == 0)
+			{	
+				while (nb % i == 0)
+				{
+					nb = nb / i;
+					printf("%d, %ld\n", i, nb);
+					largestprime = i;
+				}
+			}	
+			i++;
 		}
-		i++;
-	}
 	printf("The largest prime number of %ld number is %d\n",subs, largestprime);
+	}
+	else
+		printf("The number does not have a prime number.\n");
 	return (0);
 }
